@@ -50,56 +50,57 @@ html, body {
         </form>
     </div>
 
-    <script>
+</body>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1r7F8zrPEpzmAzP7yQXu3yBmQdlDV8xc"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
     function initMap() {
 
-      // マップの初期化
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 13,
-        center: {lat: 35.6807251137039, lng: 139.76707935333252}
-      });
+        // マップの初期化
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 13,
+            center: {lat: 35.6807251137039, lng: 139.76707935333252}
+        });
 
-      // クリックイベントを追加
-      map.addListener('click', function(e) {
-        getClickLatLng(e.latLng, map);
-      });
+        // クリックイベントを追加
+        map.addListener('click', function(e) {
+            getClickLatLng(e.latLng, map);
+        });
     }
 
     function getClickLatLng(lat_lng, map) {
 
-      // 座標を表示
-      //document.getElementById('lat').textContent = lat_lng.lat();
-      //document.getElementById('lng').textContent = lat_lng.lng();
-      $(function() {
-    	  //alert("STEP-1");
-    	// テキストボックスへ値を設定します
-    	    $("#inputEmail1").val(lat_lng.lat());
-    	    $("#inputEmail2").val(lat_lng.lng());
-    	    
-    	});
+        // 座標を表示
+        //document.getElementById('lat').textContent = lat_lng.lat();
+        //document.getElementById('lng').textContent = lat_lng.lng();
+        $(function() {
+            //alert("STEP-1");
+            // テキストボックスへ値を設定します
+            $("#inputEmail1").val(lat_lng.lat());
+            $("#inputEmail2").val(lat_lng.lng());
 
-      // マーカーを設置
-      var marker = new google.maps.Marker({
-        position: lat_lng,
-        map: map
-      });
+        });
 
-      // 座標の中心をずらす
-      // http://syncer.jp/google-maps-javascript-api-matome/map/method/panTo/
-      map.panTo(lat_lng);
+        // マーカーを設置
+        var marker = new google.maps.Marker({
+            position: lat_lng,
+            map: map
+        });
+
+        // 座標の中心をずらす
+        // http://syncer.jp/google-maps-javascript-api-matome/map/method/panTo/
+        map.panTo(lat_lng);
     }
-  </script>
+</script>
 
-  <script>
+<script>
     $(function() {
-      // テキストボックスへ値を設定します
-	  $("#inputEmail5").val(lat_lng.lat());
-	});
-  </script>
+        // テキストボックスへ値を設定します
+        $("#inputEmail5").val(lat_lng.lat());
+    });
+</script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1r7F8zrPEpzmAzP7yQXu3yBmQdlDV8xc"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-</body>
 </html>
