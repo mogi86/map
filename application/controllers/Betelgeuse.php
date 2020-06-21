@@ -52,7 +52,7 @@ class Betelgeuse extends CI_Controller {
         //経度
         $lng = htmlentities($get_param['lng'], ENT_QUOTES, "UTF-8");
         
-        $library_api_key = $this->getApiKey(self::LIBRARY_API);
+        $library_api_key = getenv('LIBRARY_API');
          
         $library_api_url = 'http://api.calil.jp/library';
         $query = array(
@@ -157,7 +157,7 @@ class Betelgeuse extends CI_Controller {
     private function getLibraryLoanInfo($system_id, $isbn)
     {
         
-        $library_api_key = $this->getApiKey(self::LIBRARY_API);
+        $library_api_key = getenv('LIBRARY_API');
         
         $library_api_url = 'http://api.calil.jp/check';
         $query = array(
