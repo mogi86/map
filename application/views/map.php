@@ -90,11 +90,10 @@ html, body {
     }
   </script>
 
-    <script>
-  $(function() {
-	  alert("こんにちは");
-	// テキストボックスへ値を設定します
-	    $("#inputEmail5").val(lat_lng.lat());
+  <script>
+    $(function() {
+      // テキストボックスへ値を設定します
+	  $("#inputEmail5").val(lat_lng.lat());
 	});
   </script>
 
