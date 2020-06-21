@@ -99,7 +99,7 @@ class Betelgeuse extends CI_Controller {
         
         $rakuten_api_key = $this->getApiKey(self::RAKUTEN_API);
 
-        $rakuten_api_url = 'https://app.rakuten.co.jp/services/api/BooksBook/Search/20130522';
+        $rakuten_api_url = 'https://app.rakuten.co.jp/services/api/BooksBook/Search/20170404';
         $query = array(
             'format' => 'json',
             'title' => $book_name,
